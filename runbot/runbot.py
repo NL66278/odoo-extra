@@ -43,7 +43,7 @@ _logger = logging.getLogger(__name__)
 #----------------------------------------------------------
 
 _re_error = r'^(?:\d{4}-\d\d-\d\d \d\d:\d\d:\d\d,\d{3} \d+ (?:ERROR|CRITICAL) )'
-_re_warning = r'^\d{4}-\d\d-\d\d \d\d:\d\d:\d\d,\d{3} \d+ WARNING '
+_re_warning = r'(?!.*ir_translation.*)^\d{4}-\d\d-\d\d \d\d:\d\d:\d\d,\d{3} \d+ WARNING.*'
 _re_job = re.compile('job_\d')
 
 # increase cron frequency from 0.016 Hz to 0.1 Hz to reduce starvation and improve throughput with many workers
